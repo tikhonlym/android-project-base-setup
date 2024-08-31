@@ -18,13 +18,24 @@ configure<BaseAppModuleExtension> {
             output.outputFileName = newFileName
         }
     }
+    defaultConfig {
+        versionCode = AndroidConst.VERSION_CODE
+        versionName = AndroidConst.VERSION_NAME
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        getByName("release") {
+            signingConfig = signingConfigs.getByName("debug")
+        }
+    }
     buildFeatures {
         compose = true
         buildConfig = true
         viewBinding = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = AndroidConst.KOTLIN_COMPILER_EXTENSION_VERSION
+        kotlinCompilerExtensionVersion = AndroidConst.COMPOSE_KOTLIN_COMPILER_EXTENSION_VERSION
     }
 }
 
