@@ -38,6 +38,7 @@
             <option value="$PROJECT_DIR$/domain/home-domain" />
             <option value="$PROJECT_DIR$/feature" />
             <option value="$PROJECT_DIR$/feature/home-feature" />
+            <option value="$PROJECT_DIR$/feature/settings-feature" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />
